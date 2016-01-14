@@ -1,5 +1,28 @@
-% This file was created with JabRef 2.9.2.
-% Encoding: Utf8
+% Encoding: UTF-8
+
+@MISC{2014-msr-x86proved-io,
+  author = {Jason Gross},
+  title = {Presentation: Input, Output, and Automation in x86 Proved},
+  month = {August},
+  year = {2014},
+  note = {Presented at Microsoft Research, Cambridge, UK},
+  abstract = {The x86proved project can now verify assembly programs with input
+	and output! The code-reasoning throughout the project is now mostly
+	automatic. Although not yet push-button verification (specification-level
+	reasoning, in particular, leaves a lot to be desired) these tactics
+	make a significant step towards that goal. This presentation will
+	cover: \\ • some programs whose I/O behaviour has been verified (including
+	a simplified version of the \texttt{echo} command-line tool) \\ •
+	the new automation for fully automatic correctness proofs of Hoare-triple
+	rules for basic instructions \\ • the new automation for applying
+	Hoare rules for assembly instructions automatically \\ • the basics
+	of how we’re specifying and verifying the I/O behaviour of programs},
+  day = {20},
+  owner = {Jason},
+  timestamp = {2014.08.20},
+  url = {https://people.csail.mit.edu/jgross/personal-website/presentations/msr-2014-final-talk/input-output-and-automation-in-x86proved.pdf},
+  url-pptx = {https://people.csail.mit.edu/jgross/personal-website/presentations/msr-2014-final-talk/input-output-and-automation-in-x86proved.pptx}
+}
 
 @INPROCEEDINGS{adt-synthesis,
   author = {Ben Delaware and Cl\'ement Pit--Claudel and Jason Gross and Adam
@@ -32,6 +55,39 @@
   url = {https://people.csail.mit.edu/jgross/personal-website/papers/2015-adt-synthesis.pdf}
 }
 
+@INPROCEEDINGS{category-coq-experience,
+  author = {Jason Gross and Adam Chlipala and David I. Spivak},
+  title = {Experience Implementing a Performant Category-Theory Library in {C}oq},
+  booktitle = {Proceedings of the \href{http://www.cs.uwyo.edu/~ruben/itp-2014}{5th
+	International Conference on Interactive Theorem Proving (ITP'14)}},
+  year = {2014},
+  month = {July},
+  abstract = {We describe our experience implementing a broad category-theory library
+	in Coq. Category theory and computational performance are not usually
+	mentioned in the same breath, but we have needed substantial engineering
+	effort to teach Coq to cope with large categorical constructions
+	without slowing proof script processing unacceptably. In this paper,
+	we share the lessons we have learned about how to represent very
+	abstract mathematical objects and arguments in Coq and how future
+	proof assistants might be designed to better support such reasoning.
+	One particular encoding trick to which we draw attention allows category-theoretic
+	arguments involving \emph{duality} to be internalized in Coq's logic
+	with definitional equality. Ours may be the largest Coq development
+	to date that uses the relatively new Coq version developed by homotopy
+	type theorists, and we reflect on which new features were especially
+	helpful.},
+  eprint = {1401.7694},
+  full-bibliography = {https://people.csail.mit.edu/jgross/personal-website/papers/category-coq-experience.html},
+  original-url = {https://people.csail.mit.edu/jgross/personal-website/papers/category-coq-experience-itp-submission.pdf},
+  owner = {Jason},
+  presentation-annotated-pptx = {https://people.csail.mit.edu/jgross/personal-website/presentations/itp-2014/category-coq-experience.pptx},
+  presentation-pdf = {https://people.csail.mit.edu/jgross/personal-website/presentations/itp-2014/category-coq-experience.pdf},
+  published-url-springer = {http://link.springer.com/chapter/10.1007/978-3-319-08970-6_18},
+  reviews = {https://people.csail.mit.edu/jgross/personal-website/papers/category-coq-experience-itp-2014-reviews.txt},
+  timestamp = {2014.01.19},
+  url = {https://people.csail.mit.edu/jgross/personal-website/papers/category-coq-experience-itp-submission-final.pdf}
+}
+
 @MISC{coqpl-15-coq-bug-minimizer,
   author = {Jason Gross},
   title = {Coq Bug Minimizer},
@@ -53,28 +109,53 @@
   url = {https://people.csail.mit.edu/jgross/personal-website/papers/2015-coq-bug-minimizer.pdf}
 }
 
-@MISC{2014-msr-x86proved-io,
-  author = {Jason Gross},
-  title = {Presentation: Input, Output, and Automation in x86 Proved},
-  month = {August},
-  year = {2014},
-  note = {Presented at Microsoft Research, Cambridge, UK},
-  abstract = {The x86proved project can now verify assembly programs with input
-	and output! The code-reasoning throughout the project is now mostly
-	automatic. Although not yet push-button verification (specification-level
-	reasoning, in particular, leaves a lot to be desired) these tactics
-	make a significant step towards that goal. This presentation will
-	cover: \\ • some programs whose I/O behaviour has been verified (including
-	a simplified version of the \texttt{echo} command-line tool) \\ •
-	the new automation for fully automatic correctness proofs of Hoare-triple
-	rules for basic instructions \\ • the new automation for applying
-	Hoare rules for assembly instructions automatically \\ • the basics
-	of how we’re specifying and verifying the I/O behaviour of programs},
-  day = {20},
+@MISC{coqpl-15-ltac-profiler,
+  author = {Tobias Tebbi and Jason Gross},
+  title = {A Profiler for {L}tac},
+  month = {January},
+  year = {2015},
+  note = {Accepted for presentation at CoqPL 2015},
+  abstract = {We present a simple profiler for the Ltac tactic language of the Coq
+	Proof Assistent. It measures the time spent in invocations of primitive
+	tactics as well as tactics defined in Ltac and their inner invocations.
+	The profiler is controlled using Vernacular commands and prints an
+	aggregated view that differentiates between tactic invocations depending
+	on their call tree location.},
   owner = {Jason},
-  timestamp = {2014.08.20},
-  url = {https://people.csail.mit.edu/jgross/personal-website/presentations/msr-2014-final-talk/input-output-and-automation-in-x86proved.pdf},
-  url-pptx = {https://people.csail.mit.edu/jgross/personal-website/presentations/msr-2014-final-talk/input-output-and-automation-in-x86proved.pptx}
+  timestamp = {2014.10.17},
+  url = {https://people.csail.mit.edu/jgross/personal-website/papers/2015-ltac-profiler.pdf}
+}
+
+@MISC{Gross2013a-database-in-categories,
+  author = {Jason Gross},
+  title = {Building Database Management on top of Category Theory in {C}oq},
+  month = {January},
+  year = {2013},
+  owner = {Jason},
+  timestamp = {2014.01.21},
+  url = {https://people.csail.mit.edu/jgross/personal-website/presentations/popl-2013/jgross-student-talk.pdf}
+}
+
+@MISC{Gross2013b-popl-minute-madness,
+  author = {Jason Gross},
+  title = {{POPL}: Minute Madness: Database Management on top of Category Theory
+	in {C}oq: Category of Relational Schemas = Category of Categories},
+  month = {January},
+  year = {2013},
+  owner = {Jason},
+  timestamp = {2014.01.21},
+  url = {https://people.csail.mit.edu/jgross/personal-website/presentations/popl-2013/minute-madness.pdf}
+}
+
+@MISC{Gross2013-csw,
+  author = {Jason Gross},
+  title = {{CSAIL} Student Workshop 2013: Computational Higher Inductive Types:
+	Computing with Custom Equalities},
+  month = {October},
+  year = {2013},
+  owner = {Jason},
+  timestamp = {2014.01.21},
+  url = {https://people.csail.mit.edu/jgross/personal-website/presentations/csw-2013/jgross-presentation-no-pause.pdf}
 }
 
 @MISC{Gross2014a-coq-wishlist,
@@ -123,92 +204,14 @@
   url = {https://people.csail.mit.edu/jgross/personal-website/presentations/coq-workshop-2014/coq-workshop-proposal-tactics-in-terms.pdf}
 }
 
-@MISC{Gross2013a-database-in-categories,
-  author = {Jason Gross},
-  title = {Building Database Management on top of Category Theory in {C}oq},
-  month = {January},
-  year = {2013},
-  owner = {Jason},
-  timestamp = {2014.01.21},
-  url = {https://people.csail.mit.edu/jgross/personal-website/presentations/popl-2013/jgross-student-talk.pdf}
-}
-
-@MISC{Gross2013b-popl-minute-madness,
-  author = {Jason Gross},
-  title = {{POPL}: Minute Madness: Database Management on top of Category Theory
-	in {C}oq: Category of Relational Schemas = Category of Categories},
-  month = {January},
-  year = {2013},
-  owner = {Jason},
-  timestamp = {2014.01.21},
-  url = {https://people.csail.mit.edu/jgross/personal-website/presentations/popl-2013/minute-madness.pdf}
-}
-
-@MISC{Gross2013-csw,
-  author = {Jason Gross},
-  title = {{CSAIL} Student Workshop 2013: Computational Higher Inductive Types:
-	Computing with Custom Equalities},
-  month = {October},
-  year = {2013},
-  owner = {Jason},
-  timestamp = {2014.01.21},
-  url = {https://people.csail.mit.edu/jgross/personal-website/presentations/csw-2013/jgross-presentation-no-pause.pdf}
-}
-
-@MISC{parsing-parse-trees,
-  author = {Jason Gross and Adam Chlipala},
-  title = {Parsing Parses: A Pearl of (Dependently Typed) Programming and Proof},
-  month = {August},
-  year = {2015},
-  note = {Submitted to \href{http://icfpconference.org/icfp2015/cfp.html}{ICFP
-	2015}},
-  abstract = {We present a functional parser for arbitrary context-free grammars,
-	together with soundness and completeness proofs, all inside Coq.
-	 By exposing the parser in the right way with parametric polymorphism
-	and dependent types, we are able to use the parser to prove its own
-	soundness, and, with a little help from relational parametricity,
-	prove its own completeness, too.  Of particular interest is one strange
-	instantiation of the type and value parameters: by parsing \emph{parse
-	trees} instead of strings, we convince the parser to generate its
-	own completeness proof.  We conclude with highlights of our experiences
-	iterating through several versions of the Coq development, and some
-	general lessons about dependently typed programming.},
-  owner = {Jason},
-  timestamp = {2015.03.14},
-  url = {https://people.csail.mit.edu/jgross/personal-website/papers/2015-parsing-parse-trees.pdf}
-}
-
-@INPROCEEDINGS{category-coq-experience,
-  author = {Jason Gross and Adam Chlipala and David I. Spivak},
-  title = {Experience Implementing a Performant Category-Theory Library in {C}oq},
-  booktitle = {Proceedings of the \href{http://www.cs.uwyo.edu/~ruben/itp-2014}{5th
-	International Conference on Interactive Theorem Proving (ITP'14)}},
-  year = {2014},
-  month = {July},
-  abstract = {We describe our experience implementing a broad category-theory library
-	in Coq. Category theory and computational performance are not usually
-	mentioned in the same breath, but we have needed substantial engineering
-	effort to teach Coq to cope with large categorical constructions
-	without slowing proof script processing unacceptably. In this paper,
-	we share the lessons we have learned about how to represent very
-	abstract mathematical objects and arguments in Coq and how future
-	proof assistants might be designed to better support such reasoning.
-	One particular encoding trick to which we draw attention allows category-theoretic
-	arguments involving \emph{duality} to be internalized in Coq's logic
-	with definitional equality. Ours may be the largest Coq development
-	to date that uses the relatively new Coq version developed by homotopy
-	type theorists, and we reflect on which new features were especially
-	helpful.},
-  eprint = {1401.7694},
-  full-bibliography = {https://people.csail.mit.edu/jgross/personal-website/papers/category-coq-experience.html},
-  original-url = {https://people.csail.mit.edu/jgross/personal-website/papers/category-coq-experience-itp-submission.pdf},
-  owner = {Jason},
-  presentation-annotated-pptx = {https://people.csail.mit.edu/jgross/personal-website/presentations/itp-2014/category-coq-experience.pptx},
-  presentation-pdf = {https://people.csail.mit.edu/jgross/personal-website/presentations/itp-2014/category-coq-experience.pdf},
-  published-url-springer = {http://link.springer.com/chapter/10.1007/978-3-319-08970-6_18},
-  reviews = {https://people.csail.mit.edu/jgross/personal-website/papers/category-coq-experience-itp-2014-reviews.txt},
-  timestamp = {2014.01.19},
-  url = {https://people.csail.mit.edu/jgross/personal-website/papers/category-coq-experience-itp-submission-final.pdf}
+@MastersThesis{jgross-thesis,
+  author =   {Jason Gross},
+  title =    {An Extensible Framework for Synthesizing Efficient, Verified Parsers},
+  school =   {Massachusetts Institute of Technology},
+  year =     {2015},
+  month =    {September},
+  abstract = {Parsers have a long history in computer science. This thesis proposes a novel approach to synthesizing efficient, verified parsers by refinement, and presents a demonstration of this approach in the Fiat framework by synthesizing a parser for arithmetic expressions.  The benefits of this framework may include more flexibility in the parsers that can be described, more control over the low-level details when necessary for performance, and automatic or mostly automatic correctness proofs.},
+  url =      {https://people.csail.mit.edu/jgross/personal-website/papers/2015-jgross-thesis.pdf}
 }
 
 @INPROCEEDINGS{Lake2011,
@@ -236,6 +239,29 @@
   timestamp = {2014.01.19},
   url = {https://people.csail.mit.edu/jgross/personal-website/papers/LakeEtAl2011CogSci.pdf},
   videos = {https://people.csail.mit.edu/jgross/personal-website/media/charactervideos.html}
+}
+
+@MISC{parsing-parse-trees,
+  author = {Jason Gross and Adam Chlipala},
+  title = {Parsing Parses: A Pearl of (Dependently Typed) Programming and Proof},
+  month = {August},
+  year = {2015},
+  note = {Submitted to \href{http://icfpconference.org/icfp2015/cfp.html}{ICFP
+	2015}},
+  abstract = {We present a functional parser for arbitrary context-free grammars,
+	together with soundness and completeness proofs, all inside Coq.
+	 By exposing the parser in the right way with parametric polymorphism
+	and dependent types, we are able to use the parser to prove its own
+	soundness, and, with a little help from relational parametricity,
+	prove its own completeness, too.  Of particular interest is one strange
+	instantiation of the type and value parameters: by parsing \emph{parse
+	trees} instead of strings, we convince the parser to generate its
+	own completeness proof.  We conclude with highlights of our experiences
+	iterating through several versions of the Coq development, and some
+	general lessons about dependently typed programming.},
+  owner = {Jason},
+  timestamp = {2015.03.14},
+  url = {https://people.csail.mit.edu/jgross/personal-website/papers/2015-parsing-parse-trees.pdf}
 }
 
 @MISC{pldi-15-fiat-to-facade,
@@ -268,22 +294,5 @@
   owner = {Jason},
   timestamp = {2014.11.17},
   url = {https://people.csail.mit.edu/jgross/personal-website/papers/2015-fiat-to-facade.pdf}
-}
-
-@MISC{coqpl-15-ltac-profiler,
-  author = {Tobias Tebbi and Jason Gross},
-  title = {A Profiler for {L}tac},
-  month = {January},
-  year = {2015},
-  note = {Accepted for presentation at CoqPL 2015},
-  abstract = {We present a simple profiler for the Ltac tactic language of the Coq
-	Proof Assistent. It measures the time spent in invocations of primitive
-	tactics as well as tactics defined in Ltac and their inner invocations.
-	The profiler is controlled using Vernacular commands and prints an
-	aggregated view that differentiates between tactic invocations depending
-	on their call tree location.},
-  owner = {Jason},
-  timestamp = {2014.10.17},
-  url = {https://people.csail.mit.edu/jgross/personal-website/papers/2015-ltac-profiler.pdf}
 }
 
