@@ -77,29 +77,3 @@ giving them semantics via interpretation functions.},
   timestamp = {2014.11.17},
   url = {https://people.csail.mit.edu/jgross/personal-website/papers/2015-fiat-to-facade.pdf}
 }
-
-@Misc{pldi-18-fiat-crypto,
-  author =          {Andres Erbsen and Jade Philipoom and Jason Gross and Robert Sloan and Adam Chlipala},
-  title =           {Systematic Generation of Fast Elliptic Curve Cryptography Implementations},
-  month =           {June},
-  year =            {2018},
-  note =            {Submitted to \href{http://pldi18.sigplan.org/home}{PLDI 2018}},
-  abstract =        {Widely used implementations of cryptographic
-                  primitives employ number-theoretic optimizations
-                  specific to large prime numbers used as moduli of
-                  arithmetic.  These optimizations have been applied
-                  manually by a handful of experts, using informal
-                  rules of thumb.  We present the first automatic
-                  compiler that applies these optimizations, starting
-                  from straightforward modular-arithmetic-based
-                  algorithms and producing code around 5X faster than
-                  with off-the-shelf arbitrary-precision integer
-                  libraries for C.  Furthermore, our compiler is
-                  implemented in the Coq proof assistant; it produces
-                  not just C-level code but also proofs of functional
-                  correctness.  We evaluate the compiler on several
-                  key primitives from elliptic curve cryptography.},
-  artifact-tar-gz = {https://people.csail.mit.edu/jgross/personal-website/papers/2018-fiat-crypto-pldi-anonymous.tar.gz},
-  code-github =     {https://github.com/mit-plv/fiat-crypto},
-  url =             {https://people.csail.mit.edu/jgross/personal-website/papers/2018-fiat-crypto-pldi-draft.pdf}
-}

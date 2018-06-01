@@ -1,12 +1,232 @@
+% This file was created with JabRef 2.10.
 % Encoding: UTF-8
 
+
+@InProceedings{Bauer:2017:HLF:3018610.3018615,
+  Title                    = {The {HoTT} Library: A Formalization of Homotopy Type Theory in {C}oq},
+  Author                   = {Bauer, Andrej and Gross, Jason and Lumsdaine, Peter LeFanu and Shulman, Michael and Sozeau, Matthieu and Spitters, Bas},
+  Booktitle                = {Proceedings of the \href{http://cpp2017.mpi-sws.org/}{6th ACM SIGPLAN Conference on Certified Programs and Proofs}},
+  Year                     = {2017},
+
+  Address                  = {New York, NY, USA},
+  Month                    = {January},
+  Pages                    = {164--172},
+  Publisher                = {ACM},
+  Series                   = {CPP 2017},
+
+  Abstract                 = {We report on the development of the \emph{{HoTT} library}, a formalization of homotopy type theory in the {Coq} proof assistant. It formalizes most of basic homotopy type theory, including univalence, higher inductive types, and significant amounts of synthetic homotopy theory, as well as category theory and modalities. The library has been used as a basis for several independent developments. We discuss the decisions that led to the design of the library, and we comment on the interaction of homotopy type theory with recently introduced features of {Coq}, such as universe polymorphism and private inductive types.},
+  Acmid                    = {3018615},
+  Doi                      = {10.1145/3018610.3018615},
+  Eprint                   = {1610.04591},
+  ISBN                     = {978-1-4503-4705-1},
+  Keywords                 = {Coq, Higher inductive types, Homotopy type theory, Univalent foundations, Universe polymorphism},
+  Location                 = {Paris, France},
+  Numpages                 = {9},
+  Oai2identifier           = {1610.04591},
+  Url                      = {https://people.csail.mit.edu/jgross/personal-website/papers/2017-HoTT-formalization.pdf}
+}
+
+@InProceedings{adt-synthesis,
+  Title                    = {Fiat: Deductive Synthesis of Abstract Data Types in a Proof Assistant},
+  Author                   = {Ben Delaware and Cl\'ement Pit--Claudel and Jason Gross and Adam Chlipala},
+  Booktitle                = {Proceedings of the \href{http://popl.mpi-sws.org/2015/}{42nd ACM SIGPLAN-SIGACT Symposium on Principles of Programming Languages (POPL'15)}},
+  Year                     = {2015},
+  Month                    = {January},
+
+  Abstract                 = {We present Fiat, a library for the Coq proof assistant supporting refinement of declarative specifications into efficient functional programs with a high degree of automation. Each refinement process leaves a proof trail, checkable by the normal Coq kernel, justifying its soundness. We focus on the synthesis of abstract data types that package methods with private data. We demonstrate the utility of our framework by applying it to the synthesis of \textit{query structures} -- abstract data types with SQL-like query and insert operations. Fiat includes a library for writing specifications of query structures in SQL-inspired notation, expressing operations over relations (tables) in terms of mathematical sets. This library includes a set of tactics for automating the refinement of these specifications into efficient, correct-by-construction OCaml code. Using these tactics, a programmer can generate such an implementation completely automatically by only specifying the equivalent of SQL indexes, data structures capturing useful views of the abstract data. We conclude by speculating on the new programming modularity possibilities enabled by an automated refinement system with proved-correct rules.},
+  Acm-authorize-url        = {https://dl.acm.org/authorize?N20774},
+  Artifact-tar-gz          = {https://people.csail.mit.edu/jgross/personal-website/media/2015-popl/fiat-20141031.tar.gz},
+  Owner                    = {Jason},
+  Project-homepage         = {http://plv.csail.mit.edu/fiat/},
+  Timestamp                = {2014.10.07},
+  Url                      = {https://people.csail.mit.edu/jgross/personal-website/papers/2015-adt-synthesis.pdf}
+}
+
+@InProceedings{fiat-crypto,
+  Title                    = {Simple High-Level Code For Cryptographic Arithmetic -- With Proofs, Without Compromises},
+  Author                   = {Andres Erbsen and Jade Philipoom and Jason Gross and Robert Sloan and Adam Chlipala},
+  Booktitle                = {Proceedings of the \href{https://www.ieee-security.org/TC/SP2019/}{40th IEEE Symposium on Security and Privacy (S\&P'19)}},
+  Year                     = {2019},
+  Month                    = {May},
+
+  Abstract                 = {We introduce a new approach for implementing cryptographic arithmetic in short high-level code with machine-checked proofs of functional correctness.
+We further demonstrate that simple partial evaluation is sufficient to transform into the fastest-known C code, breaking the decades-old pattern that the only fast implementations are those whose instruction-level steps were written out by hand.
+
+These techniques were used to build an elliptic-curve library that achieves competitive performance for 80 prime fields and multiple CPU architectures, showing that implementation and proof effort scales with the number and complexity of conceptually different algorithms, not their use cases.
+As one outcome, we present the first verified high-performance implementation of P-256, the most widely used elliptic curve.
+Implementations from our library were included in BoringSSL to replace existing specialized code, for inclusion in several large deployments for Chrome, Android, and CloudFlare.},
+  Code-github              = {https://github.com/mit-plv/fiat-crypto},
+  Owner                    = {jgross},
+  Timestamp                = {2018.06.01},
+  Url                      = {https://people.csail.mit.edu/jgross/personal-website/papers/2019-fiat-crypto-ieee-sp.pdf}
+}
+
+@Misc{hott-hott-and-category-coq-experience,
+  Title                    = {The {HoTT}/{HoTT} Library in {C}oq: Designing for Speed},
+
+  Author                   = {Jason Gross},
+  Month                    = {July},
+  Note                     = {Presented at \href{http://icms2016.zib.de/}{The 5th International Congress on Mathematical Software (ICMS 2016)}},
+  Year                     = {2016},
+
+  Abstract                 = {The HoTT/HoTT library is one of the major Coq libraries exploring univalent foundations and homotopy type theory, the other being UniMath. The library includes formalization of the basic type formers, some axiomatic higher inductive types including the circle, the interval, suspensions, and quotients, a formalization of modalities (reflective subtoposes) using modules as a way to quantify over all universe levels, formalizations of Cantor spaces and the surreals, the basic theory of h-levels, and a significant amount of category theory centered around comma categories and functoriality of various constructions involving comma categories. A significant amount of work has gone into ensuring that the library compiles quickly. This talk will discuss the various constructions in the HoTT library, as well as the design choices and features, both of Coq and of univalent type theory, which allow our library to compile and typecheck quickly.},
+  Owner                    = {Jason},
+  Presentation-annotated-pptx = {https://people.csail.mit.edu/jgross/personal-website/presentations/icms-2016/hott-hott-and-category-coq-experience.pptx},
+  Url                      = {https://people.csail.mit.edu/jgross/personal-website/presentations/icms-2016/hott-hott-and-category-coq-experience.pdf}
+}
+
+@Misc{coqpl-15-coq-bug-minimizer,
+  Title                    = {Coq Bug Minimizer},
+
+  Author                   = {Jason Gross},
+  Month                    = {January},
+  Note                     = {Presented at \href{https://coqpl.cs.washington.edu/2014/07/31/}{The First International Workshop on Coq for PL (CoqPL'15)}},
+  Year                     = {2015},
+
+  Abstract                 = {Are bugs the bane of your existence? Do you dread Coq upgrades, because they mean you'll have to spend days tracking down subtle failures deep in your developments? Have you ever hit an anomaly that just wouldn't go away, and wished you understood what triggered it? Have you ever been tormented by two blocks of code that looked identical, but behaved differently? Do you wish you submit more helpful error reports, but don't want to put in the time to construct minimal examples? If you answered ``yes'' to any of these questions, then the Coq Bug Minimizer is for you! Clone your own copy at \url{https://github.com/JasonGross/coq-bug-finder}.},
+  Owner                    = {Jason},
+  Reviews                  = {https://people.csail.mit.edu/jgross/personal-website/papers/2015-coq-bug-minimizer-reviews.txt},
+  Timestamp                = {2014.10.07},
+  Url                      = {https://people.csail.mit.edu/jgross/personal-website/papers/2015-coq-bug-minimizer.pdf}
+}
+
+@MastersThesis{jgross-masters-thesis,
+  Title                    = {An Extensible Framework for Synthesizing Efficient, Verified Parsers},
+  Author                   = {Jason Gross},
+  School                   = {Massachusetts Institute of Technology},
+  Year                     = {2015},
+  Month                    = {September},
+
+  Abstract                 = {Parsers have a long history in computer science. This thesis proposes a novel approach to synthesizing efficient, verified parsers by refinement, and presents a demonstration of this approach in the Fiat framework by synthesizing a parser for arithmetic expressions. The benefits of this framework may include more flexibility in the parsers that can be described, more control over the low-level details when necessary for performance, and automatic or mostly automatic correctness proofs.},
+  Url                      = {https://people.csail.mit.edu/jgross/personal-website/papers/2015-jgross-thesis.pdf}
+}
+
+@Misc{2014-msr-x86proved-io,
+  Title                    = {Presentation: Input, Output, and Automation in x86 Proved},
+
+  Author                   = {Jason Gross},
+  Month                    = {August},
+  Note                     = {Presented at Microsoft Research, Cambridge, UK},
+  Year                     = {2014},
+
+  Abstract                 = {The x86proved project can now verify assembly programs with input and output! The code-reasoning throughout the project is now mostly automatic. Although not yet push-button verification (specification-level reasoning, in particular, leaves a lot to be desired) these tactics make a significant step towards that goal. This presentation will cover: \\ • some programs whose I/O behaviour has been verified (including a simplified version of the \texttt{echo} command-line tool) \\ • the new automation for fully automatic correctness proofs of Hoare-triple rules for basic instructions \\ • the new automation for applying Hoare rules for assembly instructions automatically \\ • the basics of how we're specifying and verifying the I/O behaviour of programs},
+  Day                      = {20},
+  Owner                    = {Jason},
+  Timestamp                = {2014.08.20},
+  Url                      = {https://people.csail.mit.edu/jgross/personal-website/presentations/msr-2014-final-talk/input-output-and-automation-in-x86proved.pdf},
+  Url-pptx                 = {https://people.csail.mit.edu/jgross/personal-website/presentations/msr-2014-final-talk/input-output-and-automation-in-x86proved.pptx}
+}
+
+@Misc{Gross2014a-coq-wishlist,
+  Title                    = {{J}ason {G}ross' Wishlist for {C}oq},
+
+  Author                   = {Jason Gross},
+  Month                    = {January},
+  Year                     = {2014},
+
+  Owner                    = {Jason},
+  Timestamp                = {2014.01.21},
+  Url                      = {https://people.csail.mit.edu/jgross/personal-website/presentations/coq-8.6-wishlist/jgross-coq-8-6-wishlist-no-pause.pdf}
+}
+
+@Misc{Gross2014b-popl-minute-madness,
+  Title                    = {{POPL}: Minute Madness: Category Theory in {C}oq, and Program Synthesis},
+
+  Author                   = {Jason Gross},
+  Month                    = {January},
+  Note                     = {Presented at the \href{http://popl.mpi-sws.org/2014/}{41st ACM SIGPLAN-SIGACT Symposium on Principles of Programming Languages (POPL'14)}},
+  Year                     = {2014},
+
+  Owner                    = {Jason},
+  Timestamp                = {2014.01.21},
+  Url                      = {https://people.csail.mit.edu/jgross/personal-website/presentations/popl-2014-minute-madness/jason-gross-minute-madness.pdf}
+}
+
+@Misc{Gross2014c-coq-workshop-proposal,
+  Title                    = {Presentation Proposal for of Three Neat Tricks in {C}oq 8.5},
+
+  Author                   = {Jason Gross},
+  Month                    = {April},
+  Note                     = {Presented at the \href{http://www.easychair.org/smart-program/VSL2014/Coq-index.html}{6th Coq Workshop}},
+  Year                     = {2014},
+
+  Abstract                 = {Coq 8.5 has a number of new features. It has more powerful universe polymorphism support. It allows tactics to be run at interpretation to construct other terms. The ability to switch from Gallina to Ltac in arbitrary locations nicely complements the \texttt{constr:}~notation permitting the switch from Ltac to Gallina in tactics, and opens up many new possibilities. I propose to present three tricks involving these new features: tactics in terms allows the construction of tactics that recurse under binders; tactics in terms together with typeclasses allows overloading notations based on the type of their arguments; and there is a way to talk about universe levels explicitly, helped along by tactics in terms.},
+  Code-html                = {https://people.csail.mit.edu/jgross/personal-website/presentations/coq-workshop-2014/html/CoqWorkshop.tactics_in_terms_presentation.html},
+  Code-v                   = {https://people.csail.mit.edu/jgross/personal-website/presentations/coq-workshop-2014/tactics_in_terms_presentation.v},
+  Day                      = {11},
+  Owner                    = {Jason},
+  Reviews                  = {https://people.csail.mit.edu/jgross/personal-website/presentations/coq-workshop-2014/reviews.txt},
+  Timestamp                = {2014.04.11},
+  Url                      = {https://people.csail.mit.edu/jgross/personal-website/presentations/coq-workshop-2014/coq-workshop-proposal-tactics-in-terms.pdf}
+}
+
+@Misc{Gross2013a-database-in-categories,
+  Title                    = {Building Database Management on top of Category Theory in {C}oq},
+
+  Author                   = {Jason Gross},
+  Month                    = {January},
+  Note                     = {Presented as a student talk at the \href{http://popl.mpi-sws.org/2013/}{40th ACM SIGPLAN-SIGACT Symposium on Principles of Programming Languages (POPL'13)}},
+  Year                     = {2013},
+
+  Owner                    = {Jason},
+  Timestamp                = {2014.01.21},
+  Url                      = {https://people.csail.mit.edu/jgross/personal-website/presentations/popl-2013/jgross-student-talk.pdf}
+}
+
+@Misc{Gross2013b-popl-minute-madness,
+  Title                    = {{POPL}: Minute Madness: Database Management on top of Category Theory in {C}oq: Category of Relational Schemas = Category of Categories},
+
+  Author                   = {Jason Gross},
+  Month                    = {January},
+  Note                     = {Presented at the \href{http://popl.mpi-sws.org/2013/}{40th ACM SIGPLAN-SIGACT Symposium on Principles of Programming Languages (POPL'13)}},
+  Year                     = {2013},
+
+  Owner                    = {Jason},
+  Timestamp                = {2014.01.21},
+  Url                      = {https://people.csail.mit.edu/jgross/personal-website/presentations/popl-2013/minute-madness.pdf}
+}
+
+@Misc{Gross2013-csw,
+  Title                    = {{CSAIL} Student Workshop 2013: Computational Higher Inductive Types: Computing with Custom Equalities},
+
+  Author                   = {Jason Gross},
+  Month                    = {October},
+  Note                     = {Presented at the \href{http://projects.csail.mit.edu/csw/2014/index.htm}{2014 MIT CSAIL Student Workshop}},
+  Year                     = {2013},
+
+  Owner                    = {Jason},
+  Timestamp                = {2014.01.21},
+  Url                      = {https://people.csail.mit.edu/jgross/personal-website/presentations/csw-2013/jgross-presentation-no-pause.pdf}
+}
+
+@InProceedings{category-coq-experience,
+  Title                    = {Experience Implementing a Performant Category-Theory Library in {C}oq},
+  Author                   = {Jason Gross and Adam Chlipala and David I. Spivak},
+  Booktitle                = {Proceedings of the \href{http://www.cs.uwyo.edu/~ruben/itp-2014}{5th International Conference on Interactive Theorem Proving (ITP'14)}},
+  Year                     = {2014},
+  Month                    = {July},
+
+  Abstract                 = {We describe our experience implementing a broad category-theory library in Coq. Category theory and computational performance are not usually mentioned in the same breath, but we have needed substantial engineering effort to teach Coq to cope with large categorical constructions without slowing proof script processing unacceptably. In this paper, we share the lessons we have learned about how to represent very abstract mathematical objects and arguments in Coq and how future proof assistants might be designed to better support such reasoning. One particular encoding trick to which we draw attention allows category-theoretic arguments involving \emph{duality} to be internalized in Coq's logic with definitional equality. Ours may be the largest Coq development to date that uses the relatively new Coq version developed by homotopy type theorists, and we reflect on which new features were especially helpful.},
+  Eprint                   = {1401.7694},
+  Full-bibliography        = {https://people.csail.mit.edu/jgross/personal-website/papers/category-coq-experience.html},
+  Original-url             = {https://people.csail.mit.edu/jgross/personal-website/papers/category-coq-experience-itp-submission.pdf},
+  Owner                    = {Jason},
+  Presentation-annotated-pptx = {https://people.csail.mit.edu/jgross/personal-website/presentations/itp-2014/category-coq-experience.pptx},
+  Presentation-pdf         = {https://people.csail.mit.edu/jgross/personal-website/presentations/itp-2014/category-coq-experience.pdf},
+  Published-url-springer   = {http://link.springer.com/chapter/10.1007/978-3-319-08970-6_18},
+  Reviews                  = {https://people.csail.mit.edu/jgross/personal-website/papers/category-coq-experience-itp-2014-reviews.txt},
+  Timestamp                = {2014.01.19},
+  Url                      = {https://people.csail.mit.edu/jgross/personal-website/papers/category-coq-experience-itp-submission-final.pdf}
+}
+
 @InProceedings{reification-by-parametricity,
-  author          = {Jason Gross and Andres Erbsen and Adam Chlipala},
-  title           = {Reification by Parametricity: Fast Setup for Proof by Reflection, in Two Lines of {L}tac},
-  booktitle       = {Proceedings of the \href{https://itp2018.inria.fr/}{9th International Conference on Interactive Theorem Proving (ITP'18)}},
-  year            = {2018},
-  month           = {July},
-  abstract        = {We present a new strategy for performing reification in Coq.
+  Title                    = {Reification by Parametricity: Fast Setup for Proof by Reflection, in Two Lines of {L}tac},
+  Author                   = {Jason Gross and Andres Erbsen and Adam Chlipala},
+  Booktitle                = {Proceedings of the \href{https://itp2018.inria.fr/}{9th International Conference on Interactive Theorem Proving (ITP'18)}},
+  Year                     = {2018},
+  Month                    = {July},
+
+  Abstract                 = {We present a new strategy for performing reification in Coq.
 That is, we show how to generate first-class abstract syntax trees from ``native'' terms of Coq's logic, suitable as inputs to verified compilers or procedures in the \emph{proof-by-reflection} style.
 Our new strategy, based on simple generalization of subterms as variables, is straightforward, short, and fast.
 In its pure form, it is only complete for constants and function applications, but ``let'' binders, eliminators, lambdas, and quantifiers can be accommodated through lightweight coding conventions or preprocessing.
@@ -15,293 +235,39 @@ We survey the existing methods of reification across multiple Coq metaprogrammin
 We report benchmarking results for 18 variants, in addition to our own, finding that our own reification outperforms 16 of these methods in all cases, and one additional method in some cases; writing an OCaml plugin is the only method tested to be faster.
 Our method is the most concise of the strategies we considered, reifying terms using only two to four lines of \texttt{Ltac}---beyond lists of the identifiers to reify and their reified variants.
 Additionally, our strategy automatically provides error messages that are no less helpful than Coq's own error messages.},
-  artifact-github = {https://github.com/mit-plv/reification-by-parametricity},
-  artifact-tar-gz = {https://people.csail.mit.edu/jgross/personal-website/papers/2018-reification-by-parametricity-itp-camera-ready-supplementary.tar.gz},
-  original-url    = {https://people.csail.mit.edu/jgross/personal-website/papers/2018-reification-by-parametricity-itp-draft.pdf},
-  owner           = {Jason},
-  url             = {https://people.csail.mit.edu/jgross/personal-website/papers/2018-reification-by-parametricity-itp-camera-ready.pdf},
+  Artifact-github          = {https://github.com/mit-plv/reification-by-parametricity},
+  Artifact-tar-gz          = {https://people.csail.mit.edu/jgross/personal-website/papers/2018-reification-by-parametricity-itp-camera-ready-supplementary.tar.gz},
+  Original-url             = {https://people.csail.mit.edu/jgross/personal-website/papers/2018-reification-by-parametricity-itp-draft.pdf},
+  Owner                    = {Jason},
+  Url                      = {https://people.csail.mit.edu/jgross/personal-website/papers/2018-reification-by-parametricity-itp-camera-ready.pdf}
 }
 
-@MISC{2014-msr-x86proved-io,
-  author = {Jason Gross},
-  title = {Presentation: Input, Output, and Automation in x86 Proved},
-  month = {August},
-  year = {2014},
-  note = {Presented at Microsoft Research, Cambridge, UK},
-  abstract = {The x86proved project can now verify assembly programs with input
-	and output! The code-reasoning throughout the project is now mostly
-	automatic. Although not yet push-button verification (specification-level
-	reasoning, in particular, leaves a lot to be desired) these tactics
-	make a significant step towards that goal. This presentation will
-	cover: \\ • some programs whose I/O behaviour has been verified (including
-	a simplified version of the \texttt{echo} command-line tool) \\ •
-	the new automation for fully automatic correctness proofs of Hoare-triple
-	rules for basic instructions \\ • the new automation for applying
-	Hoare rules for assembly instructions automatically \\ • the basics
-	of how we're specifying and verifying the I/O behaviour of programs},
-  day = {20},
-  owner = {Jason},
-  timestamp = {2014.08.20},
-  url = {https://people.csail.mit.edu/jgross/personal-website/presentations/msr-2014-final-talk/input-output-and-automation-in-x86proved.pdf},
-  url-pptx = {https://people.csail.mit.edu/jgross/personal-website/presentations/msr-2014-final-talk/input-output-and-automation-in-x86proved.pptx}
+@InProceedings{Lake2011,
+  Title                    = {One shot learning of simple visual concepts},
+  Author                   = {Brenden M. Lake and Ruslan Salakhutdinov and Jason Gross and Joshua B. Tenenbaum},
+  Booktitle                = {Proceedings of the \href{http://cognitivesciencesociety.org/conference2011/index.html}{33rd Annual Conference of the Cognitive Science Society}},
+  Year                     = {2011},
+
+  Abstract                 = {People can learn visual concepts from just one example, but it remains a mystery how this is accomplished. Many authors have proposed that transferred knowledge from more familiar concepts is a route to one shot learning, but what is the form of this abstract knowledge? One hypothesis is that the sharing of parts is core to one shot learning, and we evaluate this idea in the domain of handwritten characters, using a massive new dataset. These simple visual concepts have a rich internal part structure, yet they are particularly tractable for computational models. We introduce a generative model of how characters are composed from strokes, where knowledge from previous characters helps to infer the latent strokes in novel characters. The stroke model outperforms a competing state-of-the-art character model on a challenging one shot learning task, and it provides a good fit to human perceptual data.},
+  Owner                    = {Jason},
+  Timestamp                = {2014.01.19},
+  Url                      = {https://people.csail.mit.edu/jgross/personal-website/papers/LakeEtAl2011CogSci.pdf},
+  Videos                   = {https://people.csail.mit.edu/jgross/personal-website/media/charactervideos.html}
 }
 
-@INPROCEEDINGS{adt-synthesis,
-  author = {Ben Delaware and Cl\'ement Pit--Claudel and Jason Gross and Adam
-	Chlipala},
-  title = {Fiat: Deductive Synthesis of Abstract Data Types in a Proof Assistant},
-  booktitle = {Proceedings of the \href{http://popl.mpi-sws.org/2015/}{42nd ACM
-	SIGPLAN-SIGACT Symposium on Principles of Programming Languages (POPL'15)}},
-  year = {2015},
-  month = {January},
-  abstract = {We present Fiat, a library for the Coq proof assistant supporting
-	refinement of declarative specifications into efficient functional
-	programs with a high degree of automation. Each refinement process
-	leaves a proof trail, checkable by the normal Coq kernel, justifying
-	its soundness. We focus on the synthesis of abstract data types that
-	package methods with private data. We demonstrate the utility of
-	our framework by applying it to the synthesis of \textit{query structures}
-	-- abstract data types with SQL-like query and insert operations.
-	Fiat includes a library for writing specifications of query structures
-	in SQL-inspired notation, expressing operations over relations (tables)
-	in terms of mathematical sets. This library includes a set of tactics
-	for automating the refinement of these specifications into efficient,
-	correct-by-construction OCaml code. Using these tactics, a programmer
-	can generate such an implementation completely automatically by only
-	specifying the equivalent of SQL indexes, data structures capturing
-	useful views of the abstract data. We conclude by speculating on
-	the new programming modularity possibilities enabled by an automated
-	refinement system with proved-correct rules.},
-  acm-authorize-url = {https://dl.acm.org/authorize?N20774},
-  artifact-tar-gz = {https://people.csail.mit.edu/jgross/personal-website/media/2015-popl/fiat-20141031.tar.gz},
-  project-homepage = {http://plv.csail.mit.edu/fiat/},
-  owner = {Jason},
-  timestamp = {2014.10.07},
-  url = {https://people.csail.mit.edu/jgross/personal-website/papers/2015-adt-synthesis.pdf}
+@Misc{coqpl-15-ltac-profiler,
+  Title                    = {A Profiler for {L}tac},
+
+  Author                   = {Tobias Tebbi and Jason Gross},
+  Month                    = {January},
+  Note                     = {Presented at \href{https://coqpl.cs.washington.edu/2014/07/31/}{The First International Workshop on Coq for PL (CoqPL'15)}},
+  Year                     = {2015},
+
+  Abstract                 = {We present a simple profiler for the Ltac tactic language of the Coq Proof Assistent. It measures the time spent in invocations of primitive tactics as well as tactics defined in Ltac and their inner invocations. The profiler is controlled using Vernacular commands and prints an aggregated view that differentiates between tactic invocations depending on their call tree location.},
+  Owner                    = {Jason},
+  Timestamp                = {2014.10.17},
+  Url                      = {https://people.csail.mit.edu/jgross/personal-website/papers/2015-ltac-profiler.pdf}
 }
 
-@InProceedings{Bauer:2017:HLF:3018610.3018615,
-  author =         {Bauer, Andrej and Gross, Jason and Lumsdaine, Peter LeFanu and Shulman, Michael and Sozeau, Matthieu and Spitters, Bas},
-  title =          {The {HoTT} Library: A Formalization of Homotopy Type Theory in {C}oq},
-  booktitle =      {Proceedings of the \href{http://cpp2017.mpi-sws.org/}{6th ACM SIGPLAN Conference on Certified Programs and Proofs}},
-  year =           {2017},
-  series =         {CPP 2017},
-  pages =          {164--172},
-  address =        {New York, NY, USA},
-  month =          {January},
-  publisher =      {ACM},
-  abstract =       {We report on the development of the \emph{{HoTT} library}, a formalization of homotopy type theory in the {Coq} proof assistant. It formalizes most of basic homotopy type theory, including univalence, higher inductive types, and significant amounts of synthetic homotopy theory, as well as category theory and modalities. The library has been used as a basis for several independent developments. We discuss the decisions that led to the design of the library, and we comment on the interaction of homotopy type theory with recently introduced features of {Coq}, such as universe polymorphism and private inductive types.},
-  acmid =          {3018615},
-  doi =            {10.1145/3018610.3018615},
-  eprint =         {1610.04591},
-  isbn =           {978-1-4503-4705-1},
-  keywords =       {Coq, Higher inductive types, Homotopy type theory, Univalent foundations, Universe polymorphism},
-  location =       {Paris, France},
-  numpages =       {9},
-  oai2identifier = {1610.04591},
-  url =            {https://people.csail.mit.edu/jgross/personal-website/papers/2017-HoTT-formalization.pdf}
-}
+@comment{jabref-meta: databaseType:bibtex;}
 
-@INPROCEEDINGS{category-coq-experience,
-  author = {Jason Gross and Adam Chlipala and David I. Spivak},
-  title = {Experience Implementing a Performant Category-Theory Library in {C}oq},
-  booktitle = {Proceedings of the \href{http://www.cs.uwyo.edu/~ruben/itp-2014}{5th
-	International Conference on Interactive Theorem Proving (ITP'14)}},
-  year = {2014},
-  month = {July},
-  abstract = {We describe our experience implementing a broad category-theory library
-	in Coq. Category theory and computational performance are not usually
-	mentioned in the same breath, but we have needed substantial engineering
-	effort to teach Coq to cope with large categorical constructions
-	without slowing proof script processing unacceptably. In this paper,
-	we share the lessons we have learned about how to represent very
-	abstract mathematical objects and arguments in Coq and how future
-	proof assistants might be designed to better support such reasoning.
-	One particular encoding trick to which we draw attention allows category-theoretic
-	arguments involving \emph{duality} to be internalized in Coq's logic
-	with definitional equality. Ours may be the largest Coq development
-	to date that uses the relatively new Coq version developed by homotopy
-	type theorists, and we reflect on which new features were especially
-	helpful.},
-  eprint = {1401.7694},
-  full-bibliography = {https://people.csail.mit.edu/jgross/personal-website/papers/category-coq-experience.html},
-  original-url = {https://people.csail.mit.edu/jgross/personal-website/papers/category-coq-experience-itp-submission.pdf},
-  owner = {Jason},
-  presentation-annotated-pptx = {https://people.csail.mit.edu/jgross/personal-website/presentations/itp-2014/category-coq-experience.pptx},
-  presentation-pdf = {https://people.csail.mit.edu/jgross/personal-website/presentations/itp-2014/category-coq-experience.pdf},
-  published-url-springer = {http://link.springer.com/chapter/10.1007/978-3-319-08970-6_18},
-  reviews = {https://people.csail.mit.edu/jgross/personal-website/papers/category-coq-experience-itp-2014-reviews.txt},
-  timestamp = {2014.01.19},
-  url = {https://people.csail.mit.edu/jgross/personal-website/papers/category-coq-experience-itp-submission-final.pdf}
-}
-
-@MISC{coqpl-15-coq-bug-minimizer,
-  author = {Jason Gross},
-  title = {Coq Bug Minimizer},
-  month = {January},
-  year = {2015},
-  note = {Presented at \href{https://coqpl.cs.washington.edu/2014/07/31/}{The First International Workshop on Coq for PL (CoqPL'15)}},
-  abstract = {Are bugs the bane of your existence? Do you dread Coq upgrades, because
-	they mean you'll have to spend days tracking down subtle failures
-	deep in your developments? Have you ever hit an anomaly that just
-	wouldn't go away, and wished you understood what triggered it? Have
-	you ever been tormented by two blocks of code that looked identical,
-	but behaved differently? Do you wish you submit more helpful error
-	reports, but don't want to put in the time to construct minimal examples?
-	If you answered ``yes'' to any of these questions, then the Coq Bug
-	Minimizer is for you! Clone your own copy at \url{https://github.com/JasonGross/coq-bug-finder}.},
-  owner = {Jason},
-  reviews = {https://people.csail.mit.edu/jgross/personal-website/papers/2015-coq-bug-minimizer-reviews.txt},
-  timestamp = {2014.10.07},
-  url = {https://people.csail.mit.edu/jgross/personal-website/papers/2015-coq-bug-minimizer.pdf}
-}
-
-@MISC{coqpl-15-ltac-profiler,
-  author = {Tobias Tebbi and Jason Gross},
-  title = {A Profiler for {L}tac},
-  month = {January},
-  year = {2015},
-  note = {Presented at \href{https://coqpl.cs.washington.edu/2014/07/31/}{The First International Workshop on Coq for PL (CoqPL'15)}},
-  abstract = {We present a simple profiler for the Ltac tactic language of the Coq
-	Proof Assistent. It measures the time spent in invocations of primitive
-	tactics as well as tactics defined in Ltac and their inner invocations.
-	The profiler is controlled using Vernacular commands and prints an
-	aggregated view that differentiates between tactic invocations depending
-	on their call tree location.},
-  owner = {Jason},
-  timestamp = {2014.10.17},
-  url = {https://people.csail.mit.edu/jgross/personal-website/papers/2015-ltac-profiler.pdf}
-}
-
-@MISC{Gross2013a-database-in-categories,
-  author = {Jason Gross},
-  title = {Building Database Management on top of Category Theory in {C}oq},
-  month = {January},
-  year = {2013},
-  owner = {Jason},
-  note = {Presented as a student talk at the \href{http://popl.mpi-sws.org/2013/}{40th ACM SIGPLAN-SIGACT Symposium on Principles of Programming Languages (POPL'13)}},
-  timestamp = {2014.01.21},
-  url = {https://people.csail.mit.edu/jgross/personal-website/presentations/popl-2013/jgross-student-talk.pdf}
-}
-
-@MISC{Gross2013b-popl-minute-madness,
-  author = {Jason Gross},
-  title = {{POPL}: Minute Madness: Database Management on top of Category Theory
-	in {C}oq: Category of Relational Schemas = Category of Categories},
-  month = {January},
-  year = {2013},
-  owner = {Jason},
-  note = {Presented at the \href{http://popl.mpi-sws.org/2013/}{40th ACM SIGPLAN-SIGACT Symposium on Principles of Programming Languages (POPL'13)}},
-  timestamp = {2014.01.21},
-  url = {https://people.csail.mit.edu/jgross/personal-website/presentations/popl-2013/minute-madness.pdf}
-}
-
-@MISC{Gross2013-csw,
-  author = {Jason Gross},
-  title = {{CSAIL} Student Workshop 2013: Computational Higher Inductive Types:
-	Computing with Custom Equalities},
-  month = {October},
-  year = {2013},
-  note = {Presented at the \href{http://projects.csail.mit.edu/csw/2014/index.htm}{2014 MIT CSAIL Student Workshop}},
-  owner = {Jason},
-  timestamp = {2014.01.21},
-  url = {https://people.csail.mit.edu/jgross/personal-website/presentations/csw-2013/jgross-presentation-no-pause.pdf}
-}
-
-@MISC{Gross2014a-coq-wishlist,
-  author = {Jason Gross},
-  title = {{J}ason {G}ross' Wishlist for {C}oq},
-  month = {January},
-  year = {2014},
-  owner = {Jason},
-  timestamp = {2014.01.21},
-  url = {https://people.csail.mit.edu/jgross/personal-website/presentations/coq-8.6-wishlist/jgross-coq-8-6-wishlist-no-pause.pdf}
-}
-
-@MISC{Gross2014b-popl-minute-madness,
-  author = {Jason Gross},
-  title = {{POPL}: Minute Madness: Category Theory in {C}oq, and Program Synthesis},
-  month = {January},
-  year = {2014},
-  owner = {Jason},
-  note = {Presented at the \href{http://popl.mpi-sws.org/2014/}{41st ACM SIGPLAN-SIGACT Symposium on Principles of Programming Languages (POPL'14)}},
-  timestamp = {2014.01.21},
-  url = {https://people.csail.mit.edu/jgross/personal-website/presentations/popl-2014-minute-madness/jason-gross-minute-madness.pdf}
-}
-
-@MISC{Gross2014c-coq-workshop-proposal,
-  author = {Jason Gross},
-  title = {Presentation Proposal for of Three Neat Tricks in {C}oq 8.5},
-  month = {April},
-  year = {2014},
-  note = {Presented at the \href{http://www.easychair.org/smart-program/VSL2014/Coq-index.html}{6th Coq Workshop}},
-  abstract = {Coq 8.5 has a number of new features. It has more powerful universe
-	polymorphism support. It allows tactics to be run at interpretation
-	to construct other terms. The ability to switch from Gallina to Ltac
-	in arbitrary locations nicely complements the \texttt{constr:}~notation
-	permitting the switch from Ltac to Gallina in tactics, and opens
-	up many new possibilities. I propose to present three tricks involving
-	these new features: tactics in terms allows the construction of tactics
-	that recurse under binders; tactics in terms together with typeclasses
-	allows overloading notations based on the type of their arguments;
-	and there is a way to talk about universe levels explicitly, helped
-	along by tactics in terms.},
-  code-html = {https://people.csail.mit.edu/jgross/personal-website/presentations/coq-workshop-2014/html/CoqWorkshop.tactics_in_terms_presentation.html},
-  code-v = {https://people.csail.mit.edu/jgross/personal-website/presentations/coq-workshop-2014/tactics_in_terms_presentation.v},
-  day = {11},
-  owner = {Jason},
-  reviews = {https://people.csail.mit.edu/jgross/personal-website/presentations/coq-workshop-2014/reviews.txt},
-  timestamp = {2014.04.11},
-  url = {https://people.csail.mit.edu/jgross/personal-website/presentations/coq-workshop-2014/coq-workshop-proposal-tactics-in-terms.pdf}
-}
-
-@Misc{hott-hott-and-category-coq-experience,
-  author =                      {Jason Gross},
-  title =                       {The {HoTT}/{HoTT} Library in {C}oq: Designing for Speed},
-  month =                       {July},
-  year =                        {2016},
-  note =                        {Presented at \href{http://icms2016.zib.de/}{The 5th International Congress on Mathematical Software (ICMS 2016)}},
-  abstract =                    {The HoTT/HoTT library is one of the major Coq libraries exploring univalent foundations and homotopy type theory, the other being UniMath.  The library includes formalization of the basic type formers, some axiomatic higher inductive types including the circle, the interval, suspensions, and quotients, a formalization of modalities (reflective subtoposes) using modules as a way to quantify over all universe levels, formalizations of Cantor spaces and the surreals, the basic theory of h-levels, and a significant amount of category theory centered around comma categories and functoriality of various constructions involving comma categories.  A significant amount of work has gone into ensuring that the library compiles quickly.  This talk will discuss the various constructions in the HoTT library, as well as the design choices and features, both of Coq and of univalent type theory, which allow our library to compile and typecheck quickly.},
-  owner =                       {Jason},
-  presentation-annotated-pptx = {https://people.csail.mit.edu/jgross/personal-website/presentations/icms-2016/hott-hott-and-category-coq-experience.pptx},
-  url =                         {https://people.csail.mit.edu/jgross/personal-website/presentations/icms-2016/hott-hott-and-category-coq-experience.pdf}
-}
-
-@MastersThesis{jgross-masters-thesis,
-  author =   {Jason Gross},
-  title =    {An Extensible Framework for Synthesizing Efficient, Verified Parsers},
-  school =   {Massachusetts Institute of Technology},
-  year =     {2015},
-  month = {September},
-  abstract = {Parsers have a long history in computer science. This thesis proposes a novel approach to synthesizing efficient, verified parsers by refinement, and presents a demonstration of this approach in the Fiat framework by synthesizing a parser for arithmetic expressions.  The benefits of this framework may include more flexibility in the parsers that can be described, more control over the low-level details when necessary for performance, and automatic or mostly automatic correctness proofs.},
-  url =      {https://people.csail.mit.edu/jgross/personal-website/papers/2015-jgross-thesis.pdf}
-}
-
-@INPROCEEDINGS{Lake2011,
-  author = {Brenden M. Lake and Ruslan Salakhutdinov and Jason Gross and Joshua
-	B. Tenenbaum},
-  title = {One shot learning of simple visual concepts},
-  booktitle = {Proceedings of the \href{http://cognitivesciencesociety.org/conference2011/index.html}{33rd Annual Conference of the Cognitive Science
-	Society}},
-  year = {2011},
-  abstract = {People can learn visual concepts from just one example, but it remains
-	a mystery how this is accomplished. Many authors have proposed that
-	transferred knowledge from more familiar concepts is a route to one
-	shot learning, but what is the form of this abstract knowledge? One
-	hypothesis is that the sharing of parts is core to one shot learning,
-	and we evaluate this idea in the domain of handwritten characters,
-	using a massive new dataset. These simple visual concepts have a
-	rich internal part structure, yet they are particularly tractable
-	for computational models. We introduce a generative model of how
-	characters are composed from strokes, where knowledge from previous
-	characters helps to infer the latent strokes in novel characters.
-	The stroke model outperforms a competing state-of-the-art character
-	model on a challenging one shot learning task, and it provides a
-	good fit to human perceptual data.},
-  owner = {Jason},
-  timestamp = {2014.01.19},
-  url = {https://people.csail.mit.edu/jgross/personal-website/papers/LakeEtAl2011CogSci.pdf},
-  videos = {https://people.csail.mit.edu/jgross/personal-website/media/charactervideos.html}
-}
-
-@Comment{jabref-meta: databaseType:bibtex;}
