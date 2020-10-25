@@ -13,6 +13,7 @@
   abstract       = {We report on the development of the \emph{{HoTT} library}, a formalization of homotopy type theory in the {Coq} proof assistant. It formalizes most of basic homotopy type theory, including univalence, higher inductive types, and significant amounts of synthetic homotopy theory, as well as category theory and modalities. The library has been used as a basis for several independent developments. We discuss the decisions that led to the design of the library, and we comment on the interaction of homotopy type theory with recently introduced features of {Coq}, such as universe polymorphism and private inductive types.},
   acmid          = {3018615},
   doi            = {10.1145/3018610.3018615},
+  doi-url        = {https://doi.org/10.1145/3018610.3018615},
   eprint         = {1610.04591},
   isbn           = {978-1-4503-4705-1},
   keywords       = {Coq, Higher inductive types, Homotopy type theory, Univalent foundations, Universe polymorphism},
@@ -30,6 +31,8 @@
   month             = {January},
   abstract          = {We present Fiat, a library for the Coq proof assistant supporting refinement of declarative specifications into efficient functional programs with a high degree of automation. Each refinement process leaves a proof trail, checkable by the normal Coq kernel, justifying its soundness. We focus on the synthesis of abstract data types that package methods with private data. We demonstrate the utility of our framework by applying it to the synthesis of \textit{query structures} -- abstract data types with SQL-like query and insert operations. Fiat includes a library for writing specifications of query structures in SQL-inspired notation, expressing operations over relations (tables) in terms of mathematical sets. This library includes a set of tactics for automating the refinement of these specifications into efficient, correct-by-construction OCaml code. Using these tactics, a programmer can generate such an implementation completely automatically by only specifying the equivalent of SQL indexes, data structures capturing useful views of the abstract data. We conclude by speculating on the new programming modularity possibilities enabled by an automated refinement system with proved-correct rules.},
   acm-authorize-url = {https://dl.acm.org/authorize?N20774},
+  doi               = {10.1145/2775051.2677006},
+  doi-url           = {https://doi.org/10.1145/2775051.2677006},
   artifact-tar-gz   = {https://people.csail.mit.edu/jgross/personal-website/media/2015-popl/fiat-20141031.tar.gz},
   owner             = {Jason},
   project-homepage  = {http://plv.csail.mit.edu/fiat/},
@@ -50,6 +53,8 @@ These techniques were used to build an elliptic-curve library that achieves comp
 As one outcome, we present the first verified high-performance implementation of P-256, the most widely used elliptic curve.
 Implementations from our library were included in BoringSSL to replace existing specialized code, for inclusion in several large deployments for Chrome, Android, and CloudFlare.},
   code-github = {https://github.com/mit-plv/fiat-crypto},
+  doi         = {10.1145/3421473.3421477},
+  doi-url     = {https://doi.org/10.1145/3421473.3421477},
   owner       = {jgross},
   timestamp   = {2018.06.01},
   url         = {https://people.csail.mit.edu/jgross/personal-website/papers/2019-fiat-crypto-ieee-sp.pdf},
@@ -81,13 +86,14 @@ Implementations from our library were included in BoringSSL to replace existing 
 }
 
 @MastersThesis{jgross-masters-thesis,
-  author   = {Jason Gross},
-  school   = {Massachusetts Institute of Technology},
-  title    = {An Extensible Framework for Synthesizing Efficient, Verified Parsers},
-  year     = {2015},
-  month    = {September},
-  abstract = {Parsers have a long history in computer science. This thesis proposes a novel approach to synthesizing efficient, verified parsers by refinement, and presents a demonstration of this approach in the Fiat framework by synthesizing a parser for arithmetic expressions. The benefits of this framework may include more flexibility in the parsers that can be described, more control over the low-level details when necessary for performance, and automatic or mostly automatic correctness proofs.},
-  url      = {https://people.csail.mit.edu/jgross/personal-website/papers/2015-jgross-thesis.pdf},
+  author     = {Jason Gross},
+  school     = {Massachusetts Institute of Technology},
+  title      = {An Extensible Framework for Synthesizing Efficient, Verified Parsers},
+  year       = {2015},
+  month      = {September},
+  abstract   = {Parsers have a long history in computer science. This thesis proposes a novel approach to synthesizing efficient, verified parsers by refinement, and presents a demonstration of this approach in the Fiat framework by synthesizing a parser for arithmetic expressions. The benefits of this framework may include more flexibility in the parsers that can be described, more control over the low-level details when necessary for performance, and automatic or mostly automatic correctness proofs.},
+  dspace-url = {http://hdl.handle.net/1721.1/101581},
+  url        = {https://people.csail.mit.edu/jgross/personal-website/papers/2015-jgross-thesis.pdf},
 }
 
 @Misc{2014-msr-x86proved-io,
@@ -193,12 +199,14 @@ This interactive presentation aims to serve as a guide to these questions and mo
 
 @InProceedings{category-coq-experience,
   author                      = {Jason Gross and Adam Chlipala and David I. Spivak},
+  editor                      = {Gerwin Klein and Ruben Gamboa},
   booktitle                   = {Proceedings of the \href{http://www.cs.uwyo.edu/~ruben/itp-2014}{5th International Conference on Interactive Theorem Proving (ITP'14)}},
   title                       = {Experience Implementing a Performant Category-Theory Library in {C}oq},
   year                        = {2014},
   month                       = {July},
   abstract                    = {We describe our experience implementing a broad category-theory library in Coq. Category theory and computational performance are not usually mentioned in the same breath, but we have needed substantial engineering effort to teach Coq to cope with large categorical constructions without slowing proof script processing unacceptably. In this paper, we share the lessons we have learned about how to represent very abstract mathematical objects and arguments in Coq and how future proof assistants might be designed to better support such reasoning. One particular encoding trick to which we draw attention allows category-theoretic arguments involving \emph{duality} to be internalized in Coq's logic with definitional equality. Ours may be the largest Coq development to date that uses the relatively new Coq version developed by homotopy type theorists, and we reflect on which new features were especially helpful.},
   eprint                      = {1401.7694},
+  arxiv-url                   = {https://arxiv.org/abs/1401.7694},
   full-bibliography           = {https://people.csail.mit.edu/jgross/personal-website/papers/category-coq-experience.html},
   original-url                = {https://people.csail.mit.edu/jgross/personal-website/papers/category-coq-experience-itp-submission.pdf},
   owner                       = {Jason},
@@ -206,17 +214,28 @@ This interactive presentation aims to serve as a guide to these questions and mo
   presentation-pdf            = {https://people.csail.mit.edu/jgross/personal-website/presentations/itp-2014/category-coq-experience.pdf},
   published-url-springer      = {http://link.springer.com/chapter/10.1007/978-3-319-08970-6_18},
   reviews                     = {https://people.csail.mit.edu/jgross/personal-website/papers/category-coq-experience-itp-2014-reviews.txt},
+  doi-url                     = {https://doi.org/10.1007/978-3-319-08970-6_18},
+  doi                         = {10.1007/978-3-319-08970-6_18},
+  isbn                        = {978-3-319-08970-6},
   timestamp                   = {2014.01.19},
+  publisher                   = {Springer International Publishing},
+  address                     = {Cham},
+  pages                       = {275--291},
   url                         = {https://people.csail.mit.edu/jgross/personal-website/papers/category-coq-experience-itp-submission-final.pdf},
 }
 
 @InProceedings{reification-by-parametricity,
-  author          = {Jason Gross and Andres Erbsen and Adam Chlipala},
-  booktitle       = {Proceedings of the \href{https://itp2018.inria.fr/}{9th International Conference on Interactive Theorem Proving (ITP'18)}},
-  title           = {Reification by Parametricity: Fast Setup for Proof by Reflection, in Two Lines of {L}tac},
-  year            = {2018},
-  month           = {July},
-  abstract        = {We present a new strategy for performing reification in Coq.
+  author                 = {Jason Gross and Andres Erbsen and Adam Chlipala},
+  booktitle              = {Proceedings of the \href{https://itp2018.inria.fr/}{9th International Conference on Interactive Theorem Proving (ITP'18)}},
+  title                  = {Reification by Parametricity: Fast Setup for Proof by Reflection, in Two Lines of {L}tac},
+  editor                 = {Jeremy Avigad and Assia Mahboubi},
+  year                   = {2018},
+  month                  = {July},
+  publisher              = {Springer International Publishing},
+  address                = {Cham},
+  pages                  = {289--305},
+  isbn                   = {978-3-319-94821-8},
+  abstract               = {We present a new strategy for performing reification in Coq.
 That is, we show how to generate first-class abstract syntax trees from ``native'' terms of Coq's logic, suitable as inputs to verified compilers or procedures in the \emph{proof-by-reflection} style.
 Our new strategy, based on simple generalization of subterms as variables, is straightforward, short, and fast.
 In its pure form, it is only complete for constants and function applications, but ``let'' binders, eliminators, lambdas, and quantifiers can be accommodated through lightweight coding conventions or preprocessing.
@@ -225,16 +244,19 @@ We survey the existing methods of reification across multiple Coq metaprogrammin
 We report benchmarking results for 18 variants, in addition to our own, finding that our own reification outperforms 16 of these methods in all cases, and one additional method in some cases; writing an OCaml plugin is the only method tested to be faster.
 Our method is the most concise of the strategies we considered, reifying terms using only two to four lines of \texttt{Ltac}---beyond lists of the identifiers to reify and their reified variants.
 Additionally, our strategy automatically provides error messages that are no less helpful than Coq's own error messages.},
-  artifact-github = {https://github.com/mit-plv/reification-by-parametricity},
-  artifact-tar-gz = {https://people.csail.mit.edu/jgross/personal-website/papers/2018-reification-by-parametricity-itp-camera-ready-supplementary.tar.gz},
-  original-url    = {https://people.csail.mit.edu/jgross/personal-website/papers/2018-reification-by-parametricity-itp-draft.pdf},
-  owner           = {Jason},
-  url             = {https://people.csail.mit.edu/jgross/personal-website/papers/2018-reification-by-parametricity-itp-camera-ready.pdf},
+  artifact-github        = {https://github.com/mit-plv/reification-by-parametricity},
+  artifact-tar-gz        = {https://people.csail.mit.edu/jgross/personal-website/papers/2018-reification-by-parametricity-itp-camera-ready-supplementary.tar.gz},
+  original-url           = {https://people.csail.mit.edu/jgross/personal-website/papers/2018-reification-by-parametricity-itp-draft.pdf},
+  doi-url                = {https://doi.org/10.1007/978-3-319-94821-8_17},
+  doi                    = {10.1007/978-3-319-94821-8_17},
+  published-url-springer = {https://link.springer.com/chapter/10.1007/978-3-319-94821-8_17},
+  owner                  = {Jason},
+  url                    = {https://people.csail.mit.edu/jgross/personal-website/papers/2018-reification-by-parametricity-itp-camera-ready.pdf},
 }
 
 @InProceedings{Lake2011,
   author           = {Brenden M. Lake and Ruslan Salakhutdinov and Jason Gross and Joshua B. Tenenbaum},
-  booktitle        = {Proceedings of the \href{http://cognitivesciencesociety.org/conference2011/index.html}{33rd Annual Conference of the Cognitive Science Society}},
+  booktitle        = {Proceedings of the \href{https://web.archive.org/web/20160823113042/http://cognitivesciencesociety.org/conference2011/index.html}{33rd Annual Conference of the Cognitive Science Society}},
   title            = {One shot learning of simple visual concepts},
   year             = {2011},
   abstract         = {People can learn visual concepts from just one example, but it remains a mystery how this is accomplished. Many authors have proposed that transferred knowledge from more familiar concepts is a route to one shot learning, but what is the form of this abstract knowledge? One hypothesis is that the sharing of parts is core to one shot learning, and we evaluate this idea in the domain of handwritten characters, using a massive new dataset. These simple visual concepts have a rich internal part structure, yet they are particularly tractable for computational models. We introduce a generative model of how characters are composed from strokes, where knowledge from previous characters helps to infer the latent strokes in novel characters. The stroke model outperforms a competing state-of-the-art character model on a challenging one shot learning task, and it provides a good fit to human perceptual data.},
@@ -268,6 +290,7 @@ Additionally, our strategy automatically provides error messages that are no les
   volume   = {382},
   abstract = {Rice is the primary crop in Bangladesh and rice yield is diminished due to the buildup of arsenic (As) in soil from irrigation with high-As groundwater. Soil testing with an inexpensive kit could help farmers target high-As soil for mitigation or decide to switch to a different crop that is less sensitive to As in soil. A total of 3240 field kit measurements of As in 0.5 g of fresh soil added to 50 mL of water were compared with total soil As concentrations measured on oven-dried homogenized soil by X-ray fluorescence (XRF). For sets of 12 soil samples collected within a series of rice fields, the average of kit As measurements was a linear function of the average of XRF measurements ($r^2 = 0.69$). Taking into account that the kit overestimates water As concentrations by about a factor of two, the relationship suggests that about a quarter of the As in paddy soil is released in the kit’s reaction vessel. Using the relationship and considering XRF measurements as the reference, the 12-sample average determined correctly whether soil As was above or below a 30 mg/kg threshold in 86\% of cases where soil As was above the threshold and in 79\% of cases where soil As was below the threshold. We also used a Bayesian approach using 12 kit measurements to estimate the probability that soil As was above a given threshold indicated by XRF measurements. The Bayesian approach is theoretically optimal but was only slightly more accurate than the linear regression. These results show that rice farmers can identify high-As portions of their fields for mitigation using a dozen field kit measurements on fresh soil and base their decisions on this information.},
   doi      = {10.1016/j.geoderma.2020.114755},
+  doi-url  = {https://doi.org/10.1016/j.geoderma.2020.114755},
   keywords = {Field kit, Rice paddy, Irrigation, Arsenic},
   url      = {http://www.sciencedirect.com/science/article/pii/S0016706120325106},
 }
