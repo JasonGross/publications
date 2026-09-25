@@ -598,23 +598,25 @@
                 This overturns the existing idea that neurons in neural networks are merely on-off switches that test for the presence of ``features'' -- instead multiple neurons can be combined in non-trivial ways to produce continuous quantities.}
 }
 
-@misc{wu2024unifyingverifyingmechanisticinterpretations,
-  title         = {Unifying and Verifying Mechanistic Interpretations: A Case Study with Group Operations},
+@inproceedings{wu2024unifyingverifyingmechanisticinterpretations,
+  title         = {Towards a Unified and Verified Understanding of Group-Operation Networks},
+  title-old     = {Unifying and Verifying Mechanistic Interpretations: A Case Study with Group Operations},
   author        = {Wilson Wu and Louis Jaburi and Jacob Drori and Jason Gross},
-  year          = {2024},
+  booktitle     = {\href{https://iclr.cc/Conferences/2025}{The Thirteenth International Conference on Learning Representations (ICLR 2025)}},
+  year          = {2025},
+  month         = {April},
   eprint        = {2410.07476},
   archiveprefix = {arXiv},
   primaryclass  = {cs.LG},
-  month         = {October},
   arxiv-url     = {https://arxiv.org/abs/2410.07476},
   doi           = {10.48550/arxiv.2410.07476},
-  eprint        = {2410.07476},
   abstract      = {A recent line of work in mechanistic interpretability has focused on reverse-engineering the computation performed by neural networks trained on the binary operation of finite groups.
                    We investigate the internals of one-hidden-layer neural networks trained on this task, revealing previously unidentified structure
-                   and producing a more complete description of such models that unifies the explanations of previous works~(Chughtai et al., 2023; Stander et al., 2024).
+                   and producing a more complete description of such models in a step towards unifying the explanations of previous works~(Chughtai et al., 2023; Stander et al., 2024).
                    Notably, these models approximate \textit{equivariance} in each input argument.
-                   We verify that our explanation applies to a large fraction of networks trained on this task by translating it into a \textit{compact proof of model performance}, a quantitative evaluation of model understanding.
-                   In particular, our explanation yields a guarantee of model accuracy that runs in 30\% the time of brute force and gives a $\geq$95\% accuracy bound for 45\% of the models we trained.
+                   We verify that our explanation applies to a large fraction of networks trained on this task by translating it into a \textit{compact proof of model performance}, a quantitative evaluation of the extent to which we faithfully and concisely explain model internals.
+                   In the main text, we focus on the symmetric group $S_5$.
+                   For models trained on this group, our explanation yields a guarantee of model accuracy that runs 3x faster than brute force and gives a $\geq$95\% accuracy bound for 45\% of the models we trained.
                    We were unable to obtain nontrivial non-vacuous accuracy bounds using only explanations from previous works.}
 }
 
@@ -637,6 +639,7 @@
   author        = {Chun Hei Yip and Rajashree Agrawal and Lawrence Chan and Jason Gross},
   year          = {2024},
   month         = {December},
+  note          = {Extends \href{https://openreview.net/forum?id=rngMb1wDOZ}{our ICML 2024 Mechanistic Interpretability Workshop poster}},
   eprint        = {2412.03773},
   archiveprefix = {arXiv},
   primaryclass  = {cs.LG},
@@ -648,6 +651,113 @@
                    We discover a novel interpretation of the MLP layer in one-layer transformers implementing the ``pizza'' algorithm: the MLP can be understood as evaluating a quadrature scheme, where each neuron computes the area of a rectangle under the curve of a trigonometric integral identity.
                    Our code is available at \url{https://tinyurl.com/mod-add-integration}.},
   arxiv-url     = {https://arxiv.org/abs/2412.03773}
+}
+
+@article{coq-bot-ieee-software-2022,
+  title         = {The Advantages of Maintaining a Multitask, Project-Specific Bot: An Experience Report},
+  author        = {Th{\'e}o Zimmermann and Julien Coolen and Jason Gross and Pierre-Marie P{\'e}drot and Ga{\"e}tan Gilbert},
+  journal       = {IEEE Software},
+  year          = {2022},
+  month         = {September},
+  volume        = {39},
+  number        = {5},
+  pages         = {32--37},
+  doi           = {10.1109/MS.2022.3179773},
+  published-url = {https://doi.org/10.1109/MS.2022.3179773},
+  eprint        = {2204.12758},
+  archiveprefix = {arXiv},
+  primaryclass  = {cs.SE},
+  arxiv-url     = {https://arxiv.org/abs/2204.12758},
+  code-github   = {https://github.com/coq/bot}
+}
+
+@article{hle-nature-2026,
+  title         = {A benchmark of expert-level academic questions to assess AI capabilities},
+  title-arxiv   = {Humanity's Last Exam},
+  author        = {{Center for AI Safety} and {Scale AI} and {HLE Contributors Consortium}},
+  journal       = {Nature},
+  year          = {2026},
+  month         = {January},
+  volume        = {649},
+  number        = {8099},
+  pages         = {1139--1146},
+  doi           = {10.1038/s41586-025-09962-4},
+  published-url = {https://doi.org/10.1038/s41586-025-09962-4},
+  note          = {Jason Gross is listed among the 1{,}000+ authors in the HLE Contributors Consortium},
+  eprint        = {2501.14249},
+  archiveprefix = {arXiv},
+  primaryclass  = {cs.LG},
+  arxiv-url     = {https://arxiv.org/abs/2501.14249},
+  url           = {https://lastexam.ai/}
+}
+
+@misc{axrp-2025-compact-proofs,
+  title                = {{AXRP} Episode 40: Jason Gross on Compact Proofs and Interpretability},
+  author               = {Jason Gross and Daniel Filan},
+  year                 = {2025},
+  month                = {March},
+  day                  = {28},
+  note                 = {Interviewed by Daniel Filan on \href{https://axrp.net/}{AXRP -- the AI X-risk Research Podcast}},
+  url                  = {https://axrp.net/episode/2025/03/28/episode-40-jason-gross-compact-proofs-interpretability.html},
+  url-alignment-forum  = {https://www.alignmentforum.org/posts/TFToqpaKMhcjAEY5E/axrp-episode-40-jason-gross-on-compact-proofs-and},
+  presentation-youtube = {https://youtu.be/ZzEj7jPk5fc},
+  abstract             = {How do we figure out whether interpretability is doing its job? One way is to see if it helps us prove things about models that we care about knowing. In this episode, I speak with Jason Gross about his agenda to benchmark interpretability in this way, and his exploration of the intersection of proofs and modern machine learning.}
+}
+
+@misc{theorem-fractional-proofs-2025,
+  title    = {Catching bugs with fractional proofs},
+  author   = {Jason Gross},
+  year     = {2025},
+  month    = {October},
+  day      = {7},
+  note     = {\href{https://theorem.dev/}{Theorem} blog},
+  url      = {https://theorem.dev/blog/catching-bugs-with-fractional-proofs/},
+  abstract = {Most large projects have a limited compute budget for testing, lest it slow down the CI pipeline.
+              This means missing rare edge cases until customers find them in production.}
+}
+
+@misc{crosscoder-interactions-neurips-mi-workshop-2025,
+  title                    = {Feature interactions in sparse crosscoders from compact proofs},
+  author                   = {Dmitry Manning-Coe and Thomas Read and Anna Soligo and Oliver Clive-Griffin and Chun Hei Yip and Alex Gibson and Rajashree Agrawal and Jason Gross},
+  year                     = {2025},
+  month                    = {December},
+  note                     = {accepted to the NeurIPS 2025 Workshop on Mechanistic Interpretability},
+  published-url-openreview = {https://openreview.net/forum?id=a98SfVkYRk}
+}
+
+@misc{lf-lean-2026,
+  title    = {\texttt{lf-lean}: The frontier of verified software engineering},
+  author   = {Vishesh Saraswat and Jeffrey Chang and Harshikaa Agrawal and Vaidehi Agarwalla and Robert Zhang and Twm Stone and Jacob Green and Shiki Vaahan and Lawrence Chan and Rajashree Agrawal and Jason Gross},
+  year     = {2026},
+  month    = {February},
+  day      = {5},
+  note     = {\href{https://theorem.dev/}{Theorem} blog},
+  url      = {https://theorem.dev/blog/lf-lean/},
+  abstract = {As AIs automate increasingly complex software tasks, one question gets harder to answer: how do we know the code they produce is correct?
+              The standard approach of reviewing AI-generated code and its tests doesn't scale.}
+}
+
+@misc{crosscoder-interactions,
+  title         = {Interactions Between Crosscoder Features: A Compact Proofs Perspective},
+  author        = {Dmitry Manning-Coe and Thomas Read and Anna Soligo and Oliver Clive-Griffin and Chun Hei Yip and Rajashree Agrawal and Jason Gross},
+  year          = {2026},
+  month         = {June},
+  eprint        = {2606.09940},
+  archiveprefix = {arXiv},
+  primaryclass  = {cs.LG},
+  arxiv-url     = {https://arxiv.org/abs/2606.09940},
+  doi           = {10.48550/arxiv.2606.09940},
+  code-github   = {https://github.com/chainik1125/crosscoders-feature-interactions/tree/arxiv},
+  abstract      = {Dictionary learning methods like Sparse Autoencoders (SAEs) and crosscoders attempt to explain a model by decomposing its activations into independent features.
+                   Interactions between features hence induce errors in the reconstruction.
+                   We formalize this intuition via compact proofs and make five contributions.
+                   First, we show how, \textit{in principle}, a compact proof of model performance can be constructed using a crosscoder.
+                   Second, we show that an error term arising in this proof can naturally be interpreted as a measure of interaction between crosscoder features and provide an explicit expression for the interaction term in the Multi-Layer Perceptron (MLP) layers.
+                   We then provide three applications of this new interaction measure.
+                   In our third contribution we show that the interaction term itself can be used as a differentiable loss penalty.
+                   Applying this penalty, we can achieve ``computationally sparse'' crosscoders that retain $60\%$ of MLP performance when only keeping a single feature at each datapoint and neuron, compared to $10\%$ in standard crosscoders.
+                   We then show that clustering according to our interaction measure provides semantically meaningful feature clusters, and finally that sleeper agents have significant interactions.
+                   Code is available at \url{https://github.com/chainik1125/crosscoders-feature-interactions/tree/arxiv}.}
 }
 
 @Comment{jabref-meta: databaseType:bibtex;}
